@@ -431,6 +431,7 @@ body {
 
 .form-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -442,8 +443,8 @@ body {
   border: none;
   border-bottom: 1px solid #333;
   background: transparent;
-  resize: none;
   font-family: "Inter", sans-serif;
+  width: 100%;
 }
 
 .form-row textarea {
@@ -468,6 +469,9 @@ button[type="submit"] {
 /* footer */
 .footer-items {
   background-color: #033c65;
+}
+.footer-container {
+  padding-bottom: 60px;
 }
 .footer-items h1 {
   color: #fff;
@@ -513,13 +517,31 @@ button[type="submit"] {
   list-style: none;
 }
 
-.footer-social{
+.footer-social {
   display: block;
-  justify-content:right;
+  justify-content: right;
   max-width: 850px;
   margin: 0 auto;
 }
-
+.footer-line {
+  width: 850px;
+  height: 1px;
+  margin: 0;
+}
+.footer-policy {
+  display: flex;
+  color: #fff;
+  font-family: "Quicksand";
+  font-size: 16px;
+  font-weight: 400;
+  gap: 20px;
+}
+.footer-social p1 {
+  color: #a3a3a3;
+  font-family: "Quicksand";
+  font-size: 12px;
+  font-weight: 400;
+}
 /* Responsive Design */
 @media (min-width: 1024px) and (max-width: 1280px) {
   .navbar {
@@ -685,17 +707,12 @@ button[type="submit"] {
 
 /* Our Rooms */
 @media (max-width: 1024px) {
-  .our-rooms {
-    padding: 10px;
-    max-width: 100%;
-  }
   .our-rooms h1 {
     font-size: 20px;
   }
   .our-rooms-content {
     display: flex !important;
-    align-items: center !important;
-    gap: 20px;
+    gap: 10px;
   }
   .room-image {
     width: 100%;
@@ -705,13 +722,13 @@ button[type="submit"] {
   .content {
     width: 100%;
     max-width: 50%;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 19px;
   }
   .content h2 {
     font-size: 16px;
     font-weight: 300;
+    color: #000;
+    text-transform: uppercase;
+    font-family: "Inter";
   }
   .content p {
     display: none;
@@ -721,23 +738,20 @@ button[type="submit"] {
     font-weight: 400;
     font-size: 12px;
     color: #333;
-    height: 50px;
+    height: 60px;
     font-family: "Inter";
     font-style: normal;
     margin: 0;
     width: 100%;
-    max-width: 200px;
   }
   .content a {
+    display: flex;
     color: #076bb2;
     font-family: "Inter";
     font-size: 13px;
-    font-style: normal;
     font-weight: 400;
   }
   .content button {
-    width: 156px;
-    max-width: 900px;
     padding: 10px 4px;
     font-size: 13px;
     display: flex;
@@ -781,9 +795,8 @@ button[type="submit"] {
 
 @media (max-width: 1024px) {
   .our-cuisine {
-    padding: 10px;
     max-width: 100%;
-    gap: 20px;
+    /* height: 255px; */
   }
   .our-cuisine h1 {
     font-size: 20px;
@@ -791,7 +804,7 @@ button[type="submit"] {
   .our-cuisine-content {
     display: flex !important;
     align-items: center !important;
-    gap: 20px;
+    gap: 10px;
   }
   .cusinie-image {
     width: 100%;
@@ -801,9 +814,6 @@ button[type="submit"] {
   .cuisine-content {
     width: 100%;
     max-width: 50%;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 9px;
   }
   .cuisine-content h2 {
     display: none;
@@ -812,13 +822,15 @@ button[type="submit"] {
     display: none;
   }
   .mobile-view-heading h1 {
-    display: block;
-    font-family: "Lora";
-    font-size: 20px;
+    width: 100%;
+    display: flex;
+    font-family: "inter";
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 145%;
-    color: #888;
+    font-weight: 300;
+    color: #000;
+    margin: 0;
+    text-transform: uppercase;
   }
 
   .cuisine-mobile-paragraph p {
@@ -836,5 +848,43 @@ button[type="submit"] {
     font-size: 13px;
     gap: 9px;
     font-weight: 400;
+  }
+}
+/* contact us */
+@media (max-width: 1024px) {
+  .contact-us-section {
+    max-width: 100%;
+    height: 518px;
+    margin: auto 0;
+    padding: 0;
+  }
+  .contact-us-section h1 {
+    font-size: 20px;
+    background-color: #fcfcfc;
+  }
+  .row-1 {
+    flex-wrap: nowrap !important;
+  }
+
+  .row-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .row-3 input {
+    width: -webkit-fill-available;
+  }
+}
+
+/* footer */
+@media (max-width: 1024px) {
+  .footer-items {
+    width: 100%;
+    height: 81px;
+    flex-shrink: 0;
+    background-color: #033c65;
+  }
+  .footer-container {
+    display: none;
   }
 }
